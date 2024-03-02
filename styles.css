@@ -1,0 +1,35 @@
+.demo-vs-banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.demo-vs-banner h1 {
+    font-family:HarrietLight, Georgia, serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.demo-video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.demo-link {
+    display: flex;
+    justify-content: space-around;
+}
+
+.demo-link a {
+    text-decoration: none;
+}
+
+.demo-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}

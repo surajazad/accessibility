@@ -33,3 +33,38 @@
     flex-direction: column;
     margin: 20px;
 }
+
+.meet-the-team {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+
+.meet-the-team img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+}
+
+.team h3 {
+    font-size: 2rem;
+    align-self: center;
+}
+
+.member-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-image span {
+    font-size: 1.5rem;
+}

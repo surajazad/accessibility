@@ -6,6 +6,11 @@ const styles = `
     font-family: 'Comic Sans MS' !important;
 }
 
+.a11y-disclaimer {
+  font-size: 11px;
+  margin: 10px;
+}
+
 p.a11y-widget-dyslexia-support, div.a11y-widget-dyslexia-support, span.a11y-widget-dyslexia-support {
     font-size: 1.05em;
 }
@@ -246,6 +251,7 @@ p.a11y-widget-dyslexia-support, div.a11y-widget-dyslexia-support, span.a11y-widg
   a11yPlugin.data = {
     heading: "VS Accessibility Menu",
     subHeading: "Accessibility Profiles",
+    disclaimer: "**VS continues its efforts to constantly improve the accessibility of its site and services by complying to the WCAG standards.This widget is an additional benefit to support the accessibility users and not a replacement for the existing accessibility support.",
     settings: {
       align: {
         id: "move_left",
@@ -491,7 +497,7 @@ p.a11y-widget-dyslexia-support, div.a11y-widget-dyslexia-support, span.a11y-widg
     <div class="rvt-dialog__body">
     <div class="a11y-widget-sub-heading-wrapper"> 
         <div>
-            <h2>${a11yPluginData.subHeading}</h2> 
+            <h2>${a11yPluginData.subHeading}</h2>
         </div>
         <div class="a11y-widget-settings">
         ${rederSettings(a11yPluginData)}
@@ -515,7 +521,7 @@ p.a11y-widget-dyslexia-support, div.a11y-widget-dyslexia-support, span.a11y-widg
     dialogRenderer.innerHTML = getDialogContent(a11yPluginData);
   };
 
-  const addDialog = function () {
+  const addDialog = function (a11yPluginData) {
     const dialogContent = getDialogContent(a11yPlugin.data);
     const dialog = `<div class="rvt-dialog" id="a11y-widget-dialog" role="dialog" tabindex="-1" aria-labelledby="dialog-title" aria-describedby="dialog-description" data-rvt-dialog="a11y-widget-dialog" data-rvt-dialog-modal data-rvt-dialog-bottom-right hidden>
     <div class="a11y-dialog-dynamic-content">${dialogContent}</div>  
@@ -524,6 +530,7 @@ p.a11y-widget-dyslexia-support, div.a11y-widget-dyslexia-support, span.a11y-widg
       <svg fill="currentColor" width="16" height="16" viewBox="0 0 16 16"><path d="m3.5 2.086 4.5 4.5 4.5-4.5L13.914 3.5 9.414 8l4.5 4.5-1.414 1.414-4.5-4.5-4.5 4.5L2.086 12.5l4.5-4.5-4.5-4.5L3.5 2.086Z"></path></svg>
     </button>
     <div class="a11y-bottom-tageline">Accessibility for Everyone ${icons["love"]}</div>
+    <p class="a11y-disclaimer">${a11yPlugin.data.disclaimer}</p>
   </div>`;
     var dialogContainer = document.createElement("div");
     dialogContainer.setAttribute("class", "dialog-renderer");

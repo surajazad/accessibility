@@ -47,11 +47,17 @@
     border-radius: 50%;
 }
 
+.image-content {
+    margin-top: 250px;
+}
+
 .team {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 30px;
+    background-image: url("./assets/images/team/Background.png");
+    background-size: 100%;
 }
 
 .team h3 {
